@@ -12,7 +12,7 @@
 echo "hello world"; 
 ?>
 
-<script>alert("Get out of this site")</script>
+<script>alert("Get out of this site, NOW")</script>
 
 </body>
 </html>

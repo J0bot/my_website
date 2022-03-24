@@ -81,6 +81,32 @@
         </a-entity>
       </a-entity>
 
+      <!--Rotating giant cube-->
+      <a-entity 
+        position="-6 4.3 -7"
+        geometry="depth: 3; height: 3; width: 3" 
+        rotation="-22.33 -31.3 -41.74" 
+        animation="property: rotation; dur: 100000;
+                       to: 0 3600 0; loop: false"
+      >
+      </a-entity>
+      <a-entity 
+        position="6 4.3 -7"
+        geometry="depth: 3; height: 3; width: 3" 
+        rotation="-22.33 -31.3 -41.74" 
+        animation="property: rotation; dur: 100000;
+                       to: 0 3600 0; loop: false"
+      >
+      </a-entity>
+
+      <a-entity 
+        position="0 4.3 -7"
+        geometry="depth: 3; height: 3; width: 3" 
+        rotation="-22.33 -31.3 -41.74" 
+        animation="property: rotation; dur: 100000;
+                       to: 0 3600 0; loop: false"
+      >
+      </a-entity>
       <!-- Hand controls -->
       <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
       <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>

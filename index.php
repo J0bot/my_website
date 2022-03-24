@@ -18,10 +18,20 @@
     <noscript>
       <meta http-equiv="refresh" content="0; url=noscript.php" />
     </noscript>
-    
-    <?php 
 
-      include("scene.php");
+    <?php 
+      if(!isset($_GET["page"])){
+        include("home.php");
+      }
+      else{
+        if($_GET["page"]=="home")
+        {
+          include("home.php");
+        }
+        else{
+          include("pages/404.php");
+        }
+      }
 
       ?>
 

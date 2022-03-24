@@ -40,6 +40,8 @@ AFRAME.registerComponent('info-panel', {
   },
 
   onMenuButtonClick: function (evt) {
+
+    
     var movieInfo = this.movieInfo[evt.currentTarget.id];
 
     this.backgroundEl.object3D.scale.set(1, 1, 1);

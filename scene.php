@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>J0bot's website</title>
-    <meta name="description" content="Laser input UI • A-Frame">
-    <link rel="icon" href="https://yt3.ggpht.com/yti/APfAmoHmEJMspUtHkNBkTy4K0Riiv8O3vVZXXfSsZWeUwQ=s88-c-k-c0x00ffffff-no-rj-mo">
-    <script src="src/js/aframe-master.js"></script>
-    <script src="src/js/aframe-environment-component.min.js"></script>
-    <script src="src/js/info-message.js"></script>
-    <script src="highlight.js"></script>
-    <script src="info-panel.js"></script>
-  </head>
-  <body>
-    <noscript>
-      <meta http-equiv="refresh" content="0; url=noscript.html" />
-    </noscript>
-
-    
-  
-    <script>
-        //alert("Get out of here");
-    </script>
-    <a-scene
+<a-scene
       background="color: #212"
       environment
       cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
@@ -32,19 +9,16 @@
           Image source: http://www.ghibli.jp/works/kazetachinu/#frame&gid=1&pid=1
           Image author: Studio Ghibli
         -->
-        <img id="kazetachinu" src="https://cdn.aframe.io/examples/ui/kazetachinu.jpg" crossorigin="anonymous"/>
         <img id="kazetachinuPoster" src="src/img/projets.png" crossorigin="anonymous"/>
         <!--
           Image source: http://www.ghibli.jp/works/ponyo/#frame&gid=1&pid=36
           Image author: Studio Ghibli
         -->
-        <img id="ponyo" src="https://cdn.aframe.io/examples/ui/ponyo.jpg" crossorigin="anonymous"/>
         <img id="ponyoPoster" src="/src/img/CV.png" crossorigin="anonymous"/>
         <!--
           Image source: http://www.ghibli.jp/works/karigurashi/#frame&gid=1&pid=32
           Image author: Studio Ghibli
         -->
-        <img id="karigurashi" src="https://cdn.aframe.io/examples/ui/karigurashi.jpg" crossorigin="anonymous"/>
         <img id="karigurashiPoster" src="https://cdn.aframe.io/examples/ui/karigurashiPoster.jpg" crossorigin="anonymous"/>
         <a-mixin
           id="frame"
@@ -154,8 +128,3 @@
         </a-entity>
       </a-entity>
     </a-scene>
-
-
-   
-  </body>
-</html>

@@ -94,15 +94,15 @@
       <a-entity id="ui" position="0 1.6 -2.5">
         <!-- Poster menu -->
         <a-entity id="menu" highlight>
-          <a-entity id="karigurashiButton" position="-2 0 0" mixin="frame" class="raycastable menu-button">
+          <a-entity info-panel id="karigurashiButton" position="-2 0 0" mixin="frame" class="raycastable menu-button">
             <a-entity material="src: #karigurashiPoster;" mixin="poster"></a-entity>
           </a-entity>
 
-          <a-entity id="kazetachinuButton" position="0 0 0" mixin="frame" class="raycastable menu-button">
+          <a-entity info-panel id="kazetachinuButton" position="0 0 0" mixin="frame" class="raycastable menu-button">
             <a-entity material="src: #kazetachinuPoster" mixin="poster"></a-entity>
           </a-entity>
 
-          <a-entity id="ponyoButton" position="2 0 0" mixin="frame" class="raycastable menu-button">
+          <a-entity info-panel id="ponyoButton" position="2 0 0" mixin="frame" class="raycastable menu-button">
             <a-entity material="src: #ponyoPoster" mixin="poster"></a-entity>
           </a-entity>
         </a-entity>

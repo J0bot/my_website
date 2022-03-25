@@ -41,7 +41,7 @@ AFRAME.registerComponent('info-panel', {
 
   onMenuButtonClick: function (evt) {
 
-    
+    console.log("salut");
     var movieTitle = this.movieInfo[evt.currentTarget.id].title;
 
     this.backgroundEl.object3D.scale.set(1, 1, 1);

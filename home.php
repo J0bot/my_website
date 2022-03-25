@@ -19,7 +19,7 @@
           Image source: http://www.ghibli.jp/works/karigurashi/#frame&gid=1&pid=32
           Image author: Studio Ghibli
         -->
-        <img id="karigurashiPoster" src="https://cdn.aframe.io/examples/ui/karigurashiPoster.jpg" crossorigin="anonymous"/>
+        <img id="karigurashiPoster" src="src/img/tests.png" crossorigin="anonymous"/>
         <a-mixin
           id="frame"
           geometry="primitive: plane; width:1.3 ; height: 1.9"

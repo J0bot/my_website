@@ -1,36 +1,37 @@
 <a-scene
-      background="color: #212"
-      environment
-      cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
-      info-message="htmlSrc: #messageText">
+  background="color: #212"
+  environment
+  cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
+  info-message="htmlSrc: #messageText">
 <a-assets>
-    <a-asset-item id="messageText" src="message.html"></a-asset-item>
+  <a-asset-item id="messageText" src="message.html"></a-asset-item>
 
-    <img id="kazetachinuPoster" src="src/img/projets.png" crossorigin="anonymous"/>
+  <img id="kazetachinuPoster" src="src/img/projets.png" crossorigin="anonymous"/>
 
-    <img id="ponyoPoster" src="/src/img/CV.png" crossorigin="anonymous"/>
+  <img id="ponyoPoster" src="/src/img/CV.png" crossorigin="anonymous"/>
 
-    <img id="karigurashiPoster" src="src/img/tests.png" crossorigin="anonymous"/>
-    <a-mixin
-      id="frame"
-      geometry="primitive: plane; width:1.3 ; height: 1.9"
-      material="color: white; shader: flat"
-      animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
-      animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
-      ></a-mixin>
-      <a-mixin
-      id="poster"
-      geometry="primitive: plane; width: 1.2; height: 1.8"
-      material="color: white; shader: flat"
-      material="shader: flat"
-      position="0 0 0.005"
-      ></a-mixin>
-      <a-mixin
-      id="movieImage"
-      geometry="primitive: plane; width: 1.5; height: 0.81"
-      material="src: #ponyo; shader: flat; transparent: true"
-      position="0 0.495 0.002"
-      ></a-mixin>
+  <img id="karigurashiPoster" src="src/img/tests.png" crossorigin="anonymous"/>
+  
+  <a-mixin
+    id="frame"
+    geometry="primitive: plane; width:1.3 ; height: 1.9"
+    material="color: white; shader: flat"
+    animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+    animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+  ></a-mixin>
+  <a-mixin
+    id="poster"
+    geometry="primitive: plane; width: 1.2; height: 1.8"
+    material="color: white; shader: flat"
+    material="shader: flat"
+    position="0 0 0.005"
+  ></a-mixin>
+  <a-mixin
+    id="movieImage"
+    geometry="primitive: plane; width: 1.5; height: 0.81"
+    material="src: #ponyo; shader: flat; transparent: true"
+    position="0 0.495 0.002"
+  ></a-mixin>
   </a-assets>
 
   <a-entity

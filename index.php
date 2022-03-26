@@ -26,6 +26,10 @@
         {
           include("home.php");
         }
+        else if($_GET["page"]=="test")
+        {
+            include("pages/test.php");
+        }
         else{
           include("pages/404.php");
         }

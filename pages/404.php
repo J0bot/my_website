@@ -1,7 +1,6 @@
 <a-scene
     background="color: #212"
-    cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
-    >
+    cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable">
 
     <a-entity
     id="background"
@@ -15,7 +14,7 @@
     <a-entity
         position="0 1.6 0"
         camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false">
-      </a-entity>
+    </a-entity>
 
     <a-entity 
     id="refresh-button"
@@ -36,6 +35,7 @@
                        to: 0 3600 0; loop: false"
     >
     </a-entity>
+
     <a-entity 
     id="refresh-button"
     scale="10 10 10"
@@ -43,8 +43,7 @@
     text="align:center; value:Error 404, page not found"></a-entity>
 
     <a-entity id="refresh-button" geometry="primitive: box" material="color: red" position="0 1.5 -2"></a-entity>
-
-    
+ 
 </a-scene>
 
 <script>

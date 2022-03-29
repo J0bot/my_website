@@ -39,3 +39,7 @@
  
 </a-scene>
 
+<script>
+    alert("Il n'y a pas de tests");
+
+</script>

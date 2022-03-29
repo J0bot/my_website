@@ -5,3 +5,9 @@
     src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE8YmOaINg&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
+
+<script>
+    alert("pas encore finit");
+
+
+</script>

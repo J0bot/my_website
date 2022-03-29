@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>J0bot's website</title>
-    <meta name="description" content="Laser input UI • A-Frame">
+    <meta name="description" content="Le site magnifique de J0bot">
     <link rel="icon" href="https://yt3.ggpht.com/yti/APfAmoHmEJMspUtHkNBkTy4K0Riiv8O3vVZXXfSsZWeUwQ=s88-c-k-c0x00ffffff-no-rj-mo">
     <script src="src/js/aframe-master.js"></script>
     <script src="src/js/aframe-environment-component.min.js"></script>

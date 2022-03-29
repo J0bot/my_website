@@ -53,8 +53,8 @@ AFRAME.registerComponent('info-panel', {
     }
     else if(movieTitle=="TESTS")
     {
-      alert("Il n'y a pas de tests");
       window.location.href = "http://j0bot.ch/?page=test";
+      alert("Il n'y a pas de tests");
     }
 
   },

@@ -30,6 +30,10 @@
         {
             include("pages/test.php");
         }
+        else if($_GET["page"]=="cv")
+        {
+            include("pages/cv.php");
+        }
         else{
           include("pages/404.php");
         }

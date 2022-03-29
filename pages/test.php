@@ -21,6 +21,16 @@
     visible="false" class="raycastable">
     </a-entity>
 
+    <a-entity 
+    id="refresh-button"
+        position="0 2 -7"
+        geometry="depth: 3; height: 3; width: 3" 
+        rotation="-22.33 -31.3 -41.74" 
+        animation="property: rotation; dur: 1000000;
+                       to: 0 36000 0; loop: false"
+    >
+    </a-entity>
+
     <a-entity
         position="0 1.6 0"
         camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false">

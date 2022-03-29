@@ -49,12 +49,12 @@ AFRAME.registerComponent('info-panel', {
     else if(movieTitle=="CV")
     {
       alert("pas encore finit");
-      
+      window.location.href = "http://j0bot.ch/?page=cv";      
     }
     else if(movieTitle=="TESTS")
     {
-      window.location.href = "http://j0bot.ch/?page=test";
       alert("Il n'y a pas de tests");
+      window.location.href = "http://j0bot.ch/?page=test";
     }
 
   },

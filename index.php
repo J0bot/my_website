@@ -16,6 +16,13 @@
 
     <?php 
       if(!isset($_GET["page"])){
+        echo '
+          <script src="src/js/aframe-master.js"></script>
+          <script src="src/js/aframe-environment-component.min.js"></script>
+          <script src="src/js/info-message.js"></script>
+          <script src="highlight.js"></script>
+          <script src="info-panel.js"></script>
+          ';
         include("home.php");
       }
       else{

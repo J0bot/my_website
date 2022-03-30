@@ -1,0 +1,35 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+        <title>My A-Frame Scene</title>
+        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+        <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene >
+            
+            <a-entity 
+            id="on_off_button" rotation="-13.888 0 0" scale="3.51817 3.51817 3.51817" 
+            position="-0.01155 0.95374 -1.69899" 
+            geometry="width: 0.11; height: 0.05; depth: 0.04" 
+            material="color: #3a50c5" 
+            >
+            <a-animation attribute="scale" begin="mouseenter" dur="0"  to="4 4 4"></a-animation>
+            <a-animation attribute="scale" begin="mouseleave" dur="0"  to="3.51817 3.51817 3.51817"></a-animation>
+    
+    
+            <a-entity 
+                position="0 0 0.02" 
+                text="value: on; color: white; align: center" 
+                scale="0.75 0.75 0.75">
+            </a-entity>
+        </a-entity>
+        
+        <a-sky color="pink"></a-sky>
+        <a-entity camera mouse-cursor></a-entity>
+        </a-scene>
+    </body>
+</html>

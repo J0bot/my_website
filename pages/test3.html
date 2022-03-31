@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - lights - rect area light</title>
+		<title>Test 3</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="main.css">
 	</head>
 	<body>
-
-		<div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - THREE.RectAreaLight<br/>
-			by <a href="http://github.com/abelnation" target="_blank" rel="noopener">abelnation</a>
-		</div>
 
 		<!-- Import maps polyfill -->
 		<!-- Remove this when import maps will be widely supported -->
@@ -36,7 +31,8 @@
 			import { RectAreaLightUniformsLib } from '../src/jsm/lights/RectAreaLightUniformsLib.js';
 
 			let renderer, scene, camera;
-			let stats;
+			var goingUp = true;
+			//let stats;
 
 			init();
 
@@ -59,30 +55,66 @@
 				const rectLight1 = new THREE.RectAreaLight( 0xff0000, 5, 4, 10 );
 				rectLight1.position.set( - 5, 5, 5 );
 				scene.add( rectLight1 );
-
+				
 				const rectLight2 = new THREE.RectAreaLight( 0x00ff00, 5, 4, 10 );
 				rectLight2.position.set( 0, 5, 5 );
 				scene.add( rectLight2 );
-
+				const rectHelper2 = new RectAreaLightHelper( rectLight2 );
+				rectLight2.name='greenLight';
+				
 				const rectLight3 = new THREE.RectAreaLight( 0x0000ff, 5, 4, 10 );
 				rectLight3.position.set( 5, 5, 5 );
 				scene.add( rectLight3 );
+				
+				const rectLight4 = new THREE.RectAreaLight( 0xff00ff, 5, 4, 10 );
+				rectLight4.position.set( 10, 5, 5 );
+				scene.add( rectLight4 );
+				
+				const rectLight5 = new THREE.RectAreaLight( 0x00ffff, 5, 4, 10 );
+				rectLight5.position.set( -10, 5, 5 );
+				scene.add( rectLight5 );
+
+				const rectLight6 = new THREE.RectAreaLight( 0xffff00, 5, 4, 10 );
+				rectLight6.position.set( 15, 5, 5 );
+				scene.add( rectLight6 );
+				
+				const rectLight7 = new THREE.RectAreaLight( 0xffff00, 5, 4, 10 );
+				rectLight7.position.set( -15, 5, 5 );
+				scene.add( rectLight7 );
+
 
 				scene.add( new RectAreaLightHelper( rectLight1 ) );
-				scene.add( new RectAreaLightHelper( rectLight2 ) );
+				scene.add( rectHelper2 );
 				scene.add( new RectAreaLightHelper( rectLight3 ) );
+				scene.add( new RectAreaLightHelper( rectLight4 ) );
+				scene.add( new RectAreaLightHelper( rectLight5 ) );
+				scene.add( new RectAreaLightHelper( rectLight6 ) );
+				scene.add( new RectAreaLightHelper( rectLight7 ) );
 
 				const geoFloor = new THREE.BoxGeometry( 2000, 0.1, 2000 );
 				const matStdFloor = new THREE.MeshStandardMaterial( { color: 0x808080, roughness: 0.1, metalness: 0 } );
 				const mshStdFloor = new THREE.Mesh( geoFloor, matStdFloor );
 				scene.add( mshStdFloor );
 
-				const geoKnot = new THREE.TorusKnotGeometry( 1.5, 0.5, 200, 16 );
+				const geoKnot = new THREE.BoxGeometry( 2, 2, 2, 16 );
 				const matKnot = new THREE.MeshStandardMaterial( { color: 0xffffff, roughness: 0, metalness: 0 } );
 				const meshKnot = new THREE.Mesh( geoKnot, matKnot );
 				meshKnot.name = 'meshKnot';
-				meshKnot.position.set( 0, 5, 0 );
+				meshKnot.position.set( 0, 3, 0 );
 				scene.add( meshKnot );
+
+				const geoCube = new THREE.BoxGeometry( 2, 2, 2, 16 );
+				const matCube = new THREE.MeshStandardMaterial( { color: 0xffffff, roughness: 0, metalness: 0 } );
+				const meshCube = new THREE.Mesh( geoCube, matCube );
+				meshCube.name = 'meshCube';
+				meshCube.position.set( -6, 3, 0 );
+				scene.add( meshCube );
+
+				const meshCube2 = new THREE.Mesh( geoCube, matCube );
+				meshCube2.name = 'meshCube2';
+				meshCube2.position.set( 6, 3, 0 );
+				scene.add( meshCube2 );
+
 
 				const controls = new OrbitControls( camera, renderer.domElement );
 				controls.target.copy( meshKnot.position );
@@ -92,8 +124,8 @@
 
 				window.addEventListener( 'resize', onWindowResize );
 
-				stats = new Stats();
-				document.body.appendChild( stats.dom );
+				//stats = new Stats();
+				//document.body.appendChild( stats.dom );
 
 			}
 
@@ -105,14 +137,63 @@
 
 			}
 
+			function animateLight(light)
+			{	
+				var heightPanel = light.height;
+
+				if(heightPanel < 25 && goingUp == true)
+				{
+					heightPanel += 0.5 ;
+				}
+				if(heightPanel <= 25 && goingUp == false)
+				{
+					heightPanel -= 0.5;
+				}
+				if(heightPanel >= 25)
+				{
+					goingUp = false;
+					heightPanel -= 0.5;
+				}
+				if(heightPanel<=10)
+				{
+					goingUp = true;
+				}
+
+
+				light.height = heightPanel;
+
+			}
+
 			function animation( time ) {
 
 				const mesh = scene.getObjectByName( 'meshKnot' );
 				mesh.rotation.y = time / 1000;
+				mesh.rotation.z = time / 1000;
+
+				const mesh2 = scene.getObjectByName( 'meshCube' );
+				mesh2.rotation.y = time / 1000;
+				mesh2.rotation.z = time / -1000;
+
+				const mesh3 = scene.getObjectByName( 'meshCube2' );
+				mesh3.rotation.y = time / -1000;
+				mesh3.rotation.z = time / 1000;
+
+				//const lights = scene.getObjectByName('light');
+
+				const greenPanel = scene.getObjectByName('greenLight');
+
+				animateLight(greenPanel);
+				//animateLight(lights);
+				
+
+
+				//greenPanel.power = time/10;
+				
+				
 
 				renderer.render( scene, camera );
 
-				stats.update();
+				//stats.update();
 
 			}
 

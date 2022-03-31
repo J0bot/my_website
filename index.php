@@ -5,7 +5,8 @@
     <title>J0bot's website</title>
     <meta name="description" content="Le site magnifique de J0bot">
     <link rel="icon" href="https://yt3.ggpht.com/yti/APfAmoHmEJMspUtHkNBkTy4K0Riiv8O3vVZXXfSsZWeUwQ=s88-c-k-c0x00ffffff-no-rj-mo">
-    
+    <link rel="stylesheet" href="src/css/main.css">
+
 
   </head>
   <body>
@@ -50,6 +51,11 @@
         else if($_GET["page"]=="cv")
         {
           include("pages/cv.php");
+        }
+        else if($_GET["page"]=="arduino")
+        {
+          echo '<script src="src/js/arduino.js"></script>';
+          include("pages/arduino_control.php");
         }
         else{
           echo '

@@ -1,23 +1,27 @@
-<a-scene
-    background="color: #FF00ff"    
->
-    <a-assets>
-    <a-asset-item id="astronaut" src="/src/img/scene.gltf"></a-asset-item>
-    </a-assets>
+<div>
+    <h1>Bienvenue sur la page des tests</h1>
+    <a href="?page=arduino">Tests Avec arduino</a>
+    <br>
+    <a href="pages/test3.html">Tests Three.js</a>
+</div>
 
-        <!-- Hand controls -->
-        <a-entity
-        id="fadeBackground"
-        geometry="primitive: sphere; radius: 2.5"
-        material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
-        </a-entity>
+<div id="testScene">
+    
+<a-scene embedded >
+
+   
+    
+    <!-- Hand controls -->
+    <a-entity
+    id="fadeBackground"
+    geometry="primitive: sphere; radius: 2.5"
+    material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
     </a-entity>
 
     <!-- 
-    This work is based on "Spaceman Model" (https://sketchfab.com/3d-models/spaceman-model-4494aa9be0c84b9dbef590a588b493cf) by likesenape (https://sketchfab.com/likesenape) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+        This work is based on "Spaceman Model" (https://sketchfab.com/3d-models/spaceman-model-4494aa9be0c84b9dbef590a588b493cf) by likesenape (https://sketchfab.com/likesenape) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
     -->
-    <a-entity gltf-model="#astronaut"></a-entity>
-    
+
 
 
     <a-entity
@@ -43,9 +47,9 @@
         position="0 13.39643 -21.18437"
         geometry="depth: 3; height: 3; width: 3" 
         rotation="-22.33 -31.3 -41.74" 
-        animation="property: rotation; dur: 1000000;
-                       to: 0 36000 0; loop: false"
-    >
+        animation="property: rotation; dur: 100000;
+        to: 0 36000 0; loop: true"
+        >
     </a-entity>
 
     <a-entity 
@@ -61,9 +65,9 @@
 
 
         <a-entity 
-            position="0 0 0.02" 
-            text="value: on; color: black; align: center" 
-            scale="0.75 0.75 0.75">
+        position="0 0 0.02" 
+        text="value: on; color: black; align: center" 
+        scale="0.75 0.75 0.75">
         </a-entity>
     </a-entity>
 
@@ -71,16 +75,19 @@
 
 
     <a-entity position="0 1.5 0">
-        <a-entity camera mouse-cursor>
+        <a-entity 
+            camera mouse-cursor>
         </a-entity>
     </a-entity>
-
     
-
-
+    
+    
+    
 </a-scene>
+
+</div>
 
 <script>
     //alert("Il n'y a pas de tests");
-
+    
 </script>

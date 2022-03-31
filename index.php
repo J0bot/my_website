@@ -54,7 +54,9 @@
         }
         else if($_GET["page"]=="arduino")
         {
-          echo '<script src="src/js/arduino.js"></script>';
+          echo '
+          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+          <script src="src/js/arduino.js"></script>';
           include("pages/arduino_control.php");
         }
         else{

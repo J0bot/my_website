@@ -1,34 +1,20 @@
-function StopMotors()
+function sendHTTP(url)
 {
-    let url1 = "http://172.16.0.5/analog/5/0";
-    let url2 = "http://172.16.0.5/analog/4/0";
-    const Http = new XMLHttpRequest();
-    Http.open("GET", url1);
-    Http.send();
-    
-    const Http2 = new XMLHttpRequest();
-    Http2.open("GET", url2);
-    Http2.send();
+    axios.get(url)
 }
 
-async function callFunction(url)
+
+function StopMotors()
 {
-    try {
-        await fetch(url);
-        
-        return await 0;
-    } catch (error) {
-        console.log(error);
-    }
+    let url1 = "http://172.16.0.5/stop";
+    sendHTTP(url1);
 }
+
 
 function StartMotors()
 {
-    let url1 = "http://172.16.0.5/analog/5/255";
-    let url2 = "http://172.16.0.5/analog/4/255";
-    callFunction(url1);
-
-    callFunction(url2);
+    let url1 = "http://172.16.0.5/start";
+    sendHTTP(url1);
     
 }
 
@@ -43,6 +29,24 @@ function FrontMotor(motor)
    var url1, url2;;
     if(motor == 1)
     {
+        url1="http://172.16.0.5/digital/8/0"
+        url2="http://172.16.0.5/digital/9/1"
+    }
+    else if (motor==2)
+    {
+        url1="http://172.16.0.5/digital/6/0"
+        url2="http://172.16.0.5/digital/7/1"
+    }
+    sendHTTP(url1);
+    sendHTTP(url2);
+
+}
+
+function BackMotor(motor)
+{
+    var url1, url2;;
+    if(motor == 1)
+    {
         url1="http://172.16.0.5/digital/8/1"
         url2="http://172.16.0.5/digital/9/0"
     }
@@ -51,20 +55,7 @@ function FrontMotor(motor)
         url1="http://172.16.0.5/digital/6/1"
         url2="http://172.16.0.5/digital/7/0"
     }
-
-    const Http = new XMLHttpRequest();
-    Http.open("GET", url1);
-    Http.send();
-
-    const Http2 = new XMLHttpRequest();
-
-    Http2.open("GET", url2);
-    Http2.send();
-
-}
-
-function BackMotor(motor)
-{
-
+    sendHTTP(url1);
+    sendHTTP(url2);
 }
 

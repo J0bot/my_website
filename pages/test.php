@@ -1,6 +1,9 @@
 <a-scene
     background="color: #FF00ff"    
 >
+    <a-assets>
+    <a-asset-item id="astronaut" src="/src/img/scene.gltf"></a-asset-item>
+    </a-assets>
 
         <!-- Hand controls -->
         <a-entity
@@ -13,7 +16,7 @@
     <!-- 
     This work is based on "Spaceman Model" (https://sketchfab.com/3d-models/spaceman-model-4494aa9be0c84b9dbef590a588b493cf) by likesenape (https://sketchfab.com/likesenape) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
     -->
-    <a-gltf-model src="src/img/astronaut.gltf"></a-gltf-model>
+    <a-entity gltf-model="#astronaut"></a-entity>
     
 
 
@@ -64,7 +67,7 @@
         </a-entity>
     </a-entity>
 
-    <a-sky color="darkblue"></a-sky>
+    <a-sky src="https://cdn.glitch.me/0dd56231-cb65-46f8-ad38-225931845e77%2Fsky1.jpg"></a-sky>
 
 
     <a-entity position="0 1.5 0">
@@ -78,6 +81,6 @@
 </a-scene>
 
 <script>
-    alert("Il n'y a pas de tests");
+    //alert("Il n'y a pas de tests");
 
 </script>
